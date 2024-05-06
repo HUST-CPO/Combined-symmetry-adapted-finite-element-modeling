@@ -1,10 +1,10 @@
 # Combined-symmetry-FEM-of-waveguiide-modal-analysis
-![Cnv structure and different FEM calculation domains.](image/Fig1.png)
+![Cnv structure and different FEM calculation domains.](image/Fig2.png)
 
 ## Overview
-The open-source MATLAB package Combined Symmetry FEM is an optical FEM program for symmetric waveguide modal analysis. Based on the Cnv symmetry in group theory, it enables truncation of the original computational domain, allowing the eigenmodes to be obtained by simulating only a part of the waveguide. This program significantly improves the efficiency of waveguide mode analysis. For combined symmetry, this package covers only the combination of rotational and mirror symmetries, i.e. Cnv-FEM. In addition to the combined symmetry FEM program, we also provide standard  FEM programs and FEM programs based on rotational symmetry.
+The open-source MATLAB package Combined Symmetry adpated FEM is an optical FEM program for modal analysis. Based on the symmetry in group theory, it enables truncation of the original computational domain, allowing the eigenmodes to be obtained by simulating only a part of the photonic structures. This program significantly improves the efficiency of modal analysis. In addition to the combined symmetry FEM program, we also provide standard  FEM programs.
 
-The essence is to decompose the originally large photonic modelling problem into several decoupled sub-tasks, which are subsequently used to fully recover the original problem. Such irreducible decompositions and complete enclosure between sub-tasks and the original problems are guaranteed by irreducible representations and enclose property of symmetry group, which lies at the heart of our approach.   Furthermore, our method classifies the eigenmodes directly based on symmetry, with one category of eigenmode corresponding to one sub-task, which is beneficial for analyzing and designing waveguide modal characteristics.
+The essence is to decompose the originally large photonic modelling problem into several decoupled sub-tasks, which are subsequently used to fully recover the original problem. Such irreducible decompositions and complete enclosure between sub-tasks and the original problems are guaranteed by irreducible representations and enclose property of symmetry group, which lies at the heart of our approach. Furthermore, our method classifies the eigenmodes directly based on symmetry, with one category of eigenmode corresponding to one sub-task, which is beneficial for analyzing and designing waveguide modal characteristics.
 
 ## Usage
 ### Functions for basic function
@@ -24,15 +24,14 @@ The essence is to decompose the originally large photonic modelling problem into
 ### Kernel function for matrix assembly
 1. `kernel/Assemble_standardFEM.m`:Used for standard FEM matrix assembly and Cnv-FEM matrix assembly.
 2. `kernel/Assemble_standardFEM_PEC.m`:PEC boundary condition processing for standard FEM.
-3. `kernel/Assemble_CnFEM.m`:Used for Cn-FEM matrix assembly.
-4. `kernel/Assemble_CnvFEM_Degenrate.m`:Used for Cnv-FEM matrix assembly.
+3. `kernel/Assemble_CnvFEM_Degenrate.m`:Used for matrix assembly when combining mirror symmetry and rotational symmetry.
 
 ### Main function of FEM
-1. `Main_StandardFEM.m`:Main function of standard FEM
-2. `Main_CnFEM.m`:Main function of Cn-FEM
-3. `Main_CnvFEM_Degenerate.m`:Main function of Cnv-FEM to analyze symmetric protection degeneracy modes
-4. `Main_CnvFEM_NonDegenerate.m`:Main function of Cnv-FEM to analyze non-degeneracy modes
+1. `Main_StandardFEM.m`:Main function of standard FEM.
+2. `Main_PTsymmetryFEM.m`:Main function when combining mirror symmetry and PT symmetry.
+3. `Main_CnvFEM_Degenerate.m`:Main function to analyze degenerate modes when combining mirror symmetry and rotational symmetry.
+4. `Main_CnvFEM_NonDegenerate.m`:Main function to analyze non-degenerate modes when combining mirror symmetry and rotational symmetry.
 
 ## Run examples
-1. Run the script `Main_StandardFEM.m`/`Main_CnFEM.m`/`Main_CnvFEM_Degenerate.m`/`Main_CnvFEM_NonDegenerate.m`.
-2. Run the COMSOL file `OpticalFiber_model_standardFEM.mph` and compare the results.
+1. Run the script `Main_StandardFEM.m`/`Main_PTsymmetryFEM.m`/`Main_CnvFEM_Degenerate.m`/`Main_CnvFEM_NonDegenerate.m`.
+2. Run the COMSOL file `HollowCoreFiber.mph`/`WaveguideWithPT.mph` and compare the results.
