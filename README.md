@@ -1,4 +1,4 @@
-# Combined-symmetry-FEM-of-waveguiide-modal-analysis
+# Combined-symmetry-adapted-finite-element-modeling
 ![Cnv structure and different FEM calculation domains.](image/Fig2.png)
 
 ## Overview
