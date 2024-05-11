@@ -33,5 +33,4 @@ The essence is to decompose the originally large photonic modelling problem into
 4. `Main_CnvFEM_NonDegenerate.m`:Main function to analyze non-degenerate modes when combining mirror symmetry and rotational symmetry.
 
 ## Run examples
-1. Run the script `Main_StandardFEM.m`/`Main_PTsymmetryFEM.m`/`Main_CnvFEM_Degenerate.m`/`Main_CnvFEM_NonDegenerate.m`.
-2. Run the COMSOL file `HollowCoreFiber.mph`/`WaveguideWithPT.mph` and compare the results.
+Run the script `Main_StandardFEM.m`/`Main_PTsymmetryFEM.m`/`Main_CnvFEM_Degenerate.m`/`Main_CnvFEM_NonDegenerate.m`.
