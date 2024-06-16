@@ -1,6 +1,4 @@
 # Combined-symmetry-adapted-finite-element-modeling
-![Cnv structure and different FEM calculation domains.](image/Fig2.png)
-
 ## Overview
 The open-source MATLAB package Combined Symmetry adpated FEM is an optical FEM program for modal analysis. Based on the symmetry in group theory, it enables truncation of the original computational domain, allowing the eigenmodes to be obtained by simulating only a part of the photonic structures. This program significantly improves the efficiency of modal analysis. In addition to the combined symmetry FEM program, we also provide standard  FEM programs.
 
